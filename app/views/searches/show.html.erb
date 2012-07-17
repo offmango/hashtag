@@ -1,8 +1,14 @@
-<ul data-role='search-results'>
-	<% @tweets.each do |tweet| %>
-		<li>
-			<%= tweet.text %>
-			<%= tweet.from_user %>
-		</li>
-	<% end %>
-</ul>
+<div id ='content'>
+
+</div>
+
+<script id ='page-content' type='text/template'>
+	<ul data-role='search-results'>
+		<% @tweets.each do |tweet| %>
+			<li>
+				<%= tweet.text %>
+				<%= tweet.from_user %>
+			</li>
+		<% end %>
+	</ul>
+</script>

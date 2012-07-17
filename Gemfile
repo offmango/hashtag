@@ -36,6 +36,7 @@ group :test do
 	gem 'database_cleaner'
 	gem 'shoulda-matchers'
 	gem 'bourne'
+	gem 'evergreen'
 end
 
 # To use ActiveModel has_secure_password
