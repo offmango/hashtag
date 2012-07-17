@@ -3,6 +3,7 @@ Feature: Search
 	As a user
 	I should be able to search for tweets
 
+	@external @slow
 	Scenario: Search Twitter by hashtag
 		When I search for the term "tdd"
 		Then I should see tweets with the hashtag "tdd"

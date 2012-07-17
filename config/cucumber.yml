@@ -4,5 +4,7 @@ rerun_opts = rerun.to_s.strip.empty? ? "--format #{ENV['CUCUMBER_FORMAT'] || 'pr
 std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --drb --strict --tags ~@wip"
 %>
 default: <%= std_opts %> features
+fast: <%= std_opts %> features --tags ~@slow
+slow: <%= std_opts %> features --tags @slow
 wip: --tags @wip:3 --wip features
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
