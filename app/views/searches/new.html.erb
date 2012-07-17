@@ -1,0 +1,5 @@
+<%= form_for :search, url: '/searches' do |form| %>
+	<%= form.label :term, 'Search Term' %>
+	<%= form.text_field :term %>
+	<%= form.submit 'Search' %>
+<% end %> 

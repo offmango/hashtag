@@ -6,7 +6,7 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'twitter', '2.5.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -34,6 +34,8 @@ group :test do
 	gem 'spork'
 	gem 'cucumber-rails', require: false
 	gem 'database_cleaner'
+	gem 'shoulda-matchers'
+	gem 'bourne'
 end
 
 # To use ActiveModel has_secure_password
