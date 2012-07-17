@@ -25,3 +25,9 @@ Then /^I should see the tweet "(.*?)" authored by "(.*?)"$/ do |tweet_text, twee
 		page.should have_css("li:contains('#{tweet_from_user}')")
 	end
 end
+
+Around do |scenario, block|
+	old_search_immplementation = Searcher.search_implementation
+	block.call
+	Searcher.search_implementation = old_search_immplementation
+end
