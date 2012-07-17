@@ -19,8 +19,9 @@ Given /^Twitter returns the following tweets when searching for "(.*?)":$/ do |h
 	Searcher.search_implementation = fake_twitter
 end
 
-Then /^I should see the tweet "(.*?)"$/ do |tweet_text|
+Then /^I should see the tweet "(.*?)" authored by "(.*?)"$/ do |tweet_text, tweet_from_user|
 	within '[data-role="search-results"]' do
 		page.should have_css("li:contains('#{tweet_text}')")
+		page.should have_css("li:contains('#{tweet_from_user}')")
 	end
 end

@@ -9,7 +9,7 @@ Feature: Search
 
 	Scenario: Search Twitter for known results
 		Given Twitter returns the following tweets when searching for "#tdd":
-			| text 						|
-			| #tdd is totally awesome 	|
+			| text 						| from_user |
+			| #tdd is totally awesome 	| john		|
 		When I search for the term "tdd"
-		Then I should see the tweet "#tdd is totally awesome"
+		Then I should see the tweet "#tdd is totally awesome" authored by "john"

@@ -1,5 +1,8 @@
 <ul data-role='search-results'>
 	<% @tweets.each do |tweet| %>
-		<li><%= tweet.text %></li>
+		<li>
+			<%= tweet.text %>
+			<%= tweet.from_user %>
+		</li>
 	<% end %>
 </ul>
